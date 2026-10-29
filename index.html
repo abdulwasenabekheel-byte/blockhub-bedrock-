@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BlockHub Bedrock</title><link rel="stylesheet" href="style.css">
+<script src="https://alcdn.msauth.net/browser/2.39.0/js/msal-browser.min.js"></script>
+</head>
+<body>
+<header><div class="brand">⬛ BlockHub <span>BEDROCK</span></div><button id="login">Sign in with Microsoft</button></header>
+<main>
+<section class="hero"><p class="eyebrow">MINECRAFT BEDROCK MULTIPLAYER</p><h1>Your next world<br><em>starts here.</em></h1><p>Discover servers or publish a world listing for friends. Works on phones, tablets and Windows.</p><div class="notice">This starter website lists servers; it does not host Minecraft worlds. A real server must be hosted separately.</div></section>
+<section class="grid">
+<article class="panel"><div class="panelhead"><div><p class="eyebrow">DISCOVER</p><h2>Server directory</h2></div><span class="pill">BEDROCK</span></div>
+<div id="servers"></div>
+<form id="serverForm"><h3>Add a server listing</h3><label>Server name<input id="serverName" required maxlength="50" placeholder="My Survival Server"></label><div class="two"><label>Address / IP<input id="serverIp" required maxlength="200" placeholder="play.example.net"></label><label>Port<input id="serverPort" type="number" min="1" max="65535" value="19132" required></label></div><label>Short description<input id="serverDesc" maxlength="120" placeholder="Survival, creative, minigames..."></label><button class="primary" type="submit">Add listing</button><p class="small">Listings are saved only in this browser until you connect a shared database.</p></form></article>
+<article class="panel"><p class="eyebrow">YOUR WORLD</p><h2>Publish a world listing</h2><p class="muted">Run a Bedrock world on a separate host, then share its address here so friends can find it.</p>
+<form id="worldForm"><label>World / server name<input id="worldName" required maxlength="50" placeholder="Friends Survival"></label><label>Server address<input id="worldIp" required maxlength="200" placeholder="Public IP or server hostname"></label><label>Port<input id="worldPort" type="number" min="1" max="65535" value="19132" required></label><label>About this world<input id="worldDesc" maxlength="120" placeholder="What are you building?"></label><button class="primary" type="submit">Publish listing</button></form>
+<div id="myWorlds"></div><div class="notice">“Publish” creates a listing, not a new hosted server. Never enter your Microsoft password on this site.</div></article>
+</section>
+<section class="panel steps"><p class="eyebrow">HOW TO JOIN</p><h2>Connect from Bedrock</h2><ol><li>Open Minecraft Bedrock and choose <b>Play → Servers</b>.</li><li>Choose <b>Add Server</b> (if available on your device).</li><li>Enter the server name, address and port shown in a listing.</li><li>Save and join. The server must be online and allow your account to connect.</li></ol><p class="small">Console platforms may restrict adding custom servers. This website cannot force Minecraft to open or bypass platform restrictions.</p></section>
+<footer>BlockHub is an independent community project, not affiliated with Mojang or Microsoft.</footer>
+</main><script src="app.js"></script>
+</body></html>
